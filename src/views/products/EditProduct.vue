@@ -79,6 +79,7 @@ export default {
           this.product,
           this.$route.params.id
         );
+        this.$router.push("/products");
         console.log(response.data);
       } catch (error) {
         console.error(error);

@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="addProduct">
-    <div style="width: 50%">
+    <div style="width: 50%; margin-left: auto; margin-right: auto">
       <div class="mb-3">
         <label for="name" class="form-label">Name</label>
         <input
@@ -22,7 +22,7 @@
       <div class="mb-3">
         <label for="price" class="form-label">Price</label>
         <input
-          type="text"
+          type="number"
           class="form-control"
           id="price"
           v-model="product.price"
@@ -61,6 +61,7 @@ export default {
       try {
         const response = await productService.addProduct(this.product);
         console.log("Success", response.data);
+        this.$router.push("/products");
       } catch (error) {
         console.error("Error", error);
       }
