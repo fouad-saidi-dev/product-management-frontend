@@ -1,11 +1,35 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import LoginView from "../views/LoginView.vue";
+import AddProduct from "@/views/products/AddProduct.vue";
+import DisplayProducts from "@/views/products/DisplayProducts.vue";
+import EditProduct from "@/views/products/EditProduct.vue";
 
 const routes = [
   {
     path: "/",
     name: "home",
     component: HomeView,
+  },
+  {
+    path: "/login",
+    name: "LoginView",
+    component: LoginView,
+  },
+  {
+    path: "/add-product",
+    name: "AddProduct",
+    component: AddProduct,
+  },
+  {
+    path: "/products",
+    name: "DisplayProducts",
+    component: DisplayProducts,
+  },
+  {
+    path: "/edit-product/:id",
+    name: "EditProduct",
+    component: EditProduct,
   },
   {
     path: "/about",
@@ -19,7 +43,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });
 
