@@ -31,5 +31,5 @@
 <img src="captures/add-product.png" />
 <br/>
 <h4>After add product</h4>
-<img src="captures/after-update.png" />
+<img src="captures/after-addproduct.png.png" />
 <br/>
